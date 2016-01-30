@@ -42,13 +42,13 @@ cacheSolve <- function(x, ...) {
   
   #Case1:Inverse exists in cache
   if (!is.null(inv)) {
-    message("Getting cached inverse matrix")
+    message("Getting cached inverse matrix!!!")
     return(inv)
   }
   
   #Case2: Inverse is NULL
   else{
-    message("Matrix changed. Calculating Inverse")
+    message("Matrix has changed. Calculating Inverse...")
     mat <- x$get() # get changed matrix
     inv <- solve(mat,...) # solves and obtains the inverse using solve.
     x$setInverse(inv)# sets the value of the inverse in the cache.
